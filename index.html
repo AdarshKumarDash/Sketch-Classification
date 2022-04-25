@@ -2,7 +2,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Sketch Identification</title>
+  <title>Sketch Classification</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -20,7 +20,8 @@
 
 <body>
   <center>
-    <div id="sketch" class="modal fade">
+    <!-- Modal -->
+    <div id="myModal" class="modal fade">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -32,12 +33,19 @@
         </div>
       </div>
     </div>
-    <h1>Sketch Identification <button id='showsketch' class="btn btn-primary" data-toggle="modal"
-        data-target="#sketch">Show Sketch</button></h1>
-    <p>Label: <span id="userimg"></span></p>
-    <p>Confidence: <span id="confidence"></span></p>
-    <button onclick="clearimg()" class="btn-lg btn btn-danger">Clear Area</button>
+    <h1>Quick Draw
+      <button style="float: right;" id="show_sketch" class="btn btn-info" data-toggle="modal" data-target="#myModal">Show Sketch</button></h1>
+      <label>Your Sketch: <span id="userimg"></span></label>
+      <br><br>
+      <label>Confidence: <span id="confidence"></span></label>
+      <h4>Sketch to be drawn: <span id="drawingimg">Bag</span></h4>
+      <label class="score">Score: <span id="userscore">10</span></label>
+      <label class="timer">Timer: <span id="timer">100</span></label>
+      <button class="btn btn-danger" onclick="cleararea()">Clear Area</button>
   </center>
+
 
   <script src="main.js"></script>
 </body>
+
+</html>

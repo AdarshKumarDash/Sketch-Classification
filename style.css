@@ -1,31 +1,32 @@
-body{
-    background-color: #ffff2d;
-}
-
-canvas {
-    border: 2px solid #333;
-    animation: animate 1s infinite;
-    background-color: black;
-    margin-top: 100px;
-    border-radius: 5px;
+body {
+    background-color: #48f132;
+    font-weight: bold !important;
+    font-size: large !important;
 }
 
 h1 {
+    background-color: aliceblue;
     width: 100%;
-    background-color: cyan;
 }
 
-#userimg, #confidence {
-    font-size: 20px;
-    font-weight: bold;
+.score {
+    float: left;
+    font-size: 30px;
+    margin-top: 30px;
 }
 
-p {
-    font-size: 15px;
-}
-
-#showsketch {
+.timer {
     float: right;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+canvas {
+    border: 3px solid #333;
+    animation: animate 1s infinite;
+    border-radius: 5px;
+    background-color: #ffff2d;
+    margin-top: 100px !important;
 }
 
 
@@ -35,20 +36,9 @@ p {
 
 
 
-@keyframes animate{
-    0% {
-        box-shadow: 5px 5px 30px 10px rgb(13, 255, 0);
-    }
-    25% {
-        box-shadow: 5px 5px 30px 10px rgb(255, 25, 25);
-    }
-    50% {
-        box-shadow: 5px 5px 30px 10px rgb(153, 19, 255);
-    }
-    75% {
-        box-shadow: 5px 5px 30px 10px rgb(27, 244, 255);
-    }
-    100% {
-        box-shadow: 5px 5px 30px 10px rgb(16, 48, 255);
-    }
+
+
+@keyframes animate {
+    from {box-shadow: 1px 1px 38px grey;}
+    to {box-shadow: 1px 1px 38px white;}
 }
