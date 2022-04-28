@@ -31,7 +31,7 @@ function cleararea() {
 }
 
 function draw() {
-    strokeWeight(12);
+    strokeWeight(5);
     stroke(0);
     if (mouseIsPressed) {
         line(pmouseX, pmouseY, mouseX, mouseY);
